@@ -10,9 +10,9 @@ Install Policy
 `sudo semodule -i container_shared_httpd_content.pp`
 
 Temporarily label for testing
-`chcon -R -t container_shared_httpd_content_t /your/target/path`
+`chcon -R -t container_shared_httpd_content_t /target/path`
 
 Permanently add label
-`semanage fcontext -a -t container_shared_httpd_content_t "/your/target/path(/.*)?"`
+`semanage fcontext -a -t container_shared_httpd_content_t "/target/path(/.*)?"`
 
 
