@@ -1,4 +1,5 @@
-SELinux policy for allowing container applications (container_t) read/write access to files while allowing an uncontainerized server (httpd_t) to read them.
+SELinux policy for allowing container applications (container_t) read/write access to files while allowing an uncontainerized server (httpd_t) to read them. \
+Tested on Alma Linux 9.
 
 Installation
 ------------
