@@ -1,5 +1,7 @@
 SELinux policy for allowing container applications (container_t) read/write access to files while allowing an uncontainerized server (httpd_t) to read them.
 
+Installation
+------------
 Ensure necessary packages are installed (Alma 9 specific example)
 `sudo dnf install policycoreutils policycoreutils-python-utils selinux-policy selinux-policy-devel`
 
