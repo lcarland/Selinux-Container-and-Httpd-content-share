@@ -1,0 +1,19 @@
+policy_module(container_shared_httpd_content, 1.0)
+
+require {
+	type httpd_t;
+	type container_t;
+	class dir { read write getattr open search };
+	class file { read write getattr open create append unlink };
+}
+
+define(`SHARE_T', `container_shared_httpd_content_t');
+
+type SHARE_T;
+files_type(SHARE_T);
+
+allow httpd_t SHARE_T:dir { read getattr open search };
+allow httpd_t SHARE_T:file { read getattr open };
+
+allow container_t SHARE_T:dir { read write getattr open search };
+allow container_t SHARE_T:file { read write getattr open create append unlink };
